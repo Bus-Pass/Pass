@@ -1,0 +1,83 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Style for the password form */
+.password-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+}
+
+.password-form input {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.password-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hide the content initially */
+.hidden-content {
+    display: none;
+    position: relative; /* Ensures children can be positioned absolutely */
+}
+
+#background-image {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Centers the image horizontally */
+    height: 100%; /* Makes the image the full height of the page */
+    transform: translateX(-50%); /* Centers the image horizontally */
+    object-fit: cover; /* Ensures the image covers the page */
+    z-index: -1; /* Puts the image behind the clock and GIF */
+}
+
+.clock-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -115%); /* Center horizontally and vertically */
+    width: 80%; /* Adjust width as needed (e.g., 80% of the page width) */
+    text-align: center;
+    color: #ffffff; /* Text color */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#date {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.8em;
+}
+
+#time {
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+/* Style for the GIF overlay */
+#overlay-gif {
+    position: absolute;
+    top: 55.7%; /* Adjust top position as needed */
+    left: 14.8%; /* Adjust left position as needed */
+    width: 71%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it appears above the image and clock */
+}
